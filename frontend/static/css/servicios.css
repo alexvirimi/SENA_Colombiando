@@ -1,0 +1,32 @@
+.region-img-representative {
+  height: 325px;
+  background: var(--clr-gris-200);
+}
+
+.secondary-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-field {
+  display: flex;
+  padding: var(--size-50) var(--size-150);
+  border: 1.5px solid var(--clr-gris-600);
+  border-radius: 100px;
+  flex-direction: row;
+  gap: var(--size-100);
+  width: fit-content;
+  height: 100%;
+  align-items: center;
+}
+
+.search-field input {
+  border: none;
+}
+
+.search-field input:focus,
+.search-field input:hover,
+.search-field input:active {
+  outline: none;
+}

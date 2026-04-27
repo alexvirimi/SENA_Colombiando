@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colombiando</title>
+    <link
+      rel="shortcut icon"
+      href="../static/img/Colombiando.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/tour-card.css" />
+    <link rel="stylesheet" href="../static/css/contact-form.css" />
+    <link rel="stylesheet" href="../static/css/carrousel.css" />
+    <link rel="stylesheet" href="../static/css/servicios.css" />
+  </head>
+  <body>
+    <section class="first-padding-block-250">
+      <div class="">
+        <div class="secondary-header">
+          <div class="carrousel">
+            <div class="tour-exhibited">
+              <div class="tour-info-card">
+                <h2 class="fs-body-title">Nombre del Tour</h2>
+                <span class="description fs-details">
+                  <span>Ubicación</span>, Colombia • <span>Mes</span>,
+                  <span>Año</span>
+                </span>
+              </div>
+            </div>
+            <button class="btn-before">
+              <img src="../static/img/before.svg" alt="" />
+            </button>
+            <button class="btn-next">
+              <img src="../static/img/after.svg" alt="" />
+            </button>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="padding-block-250">
+      <div class="container">
+        <nav class="secondary-nav">
+          <div class="nav-wrapper">
+            <ul role="list" class="nav-list">
+              <li><a href="#" class="nav-list-item" id="Inicio">Caribe</a></li>
+              <li>
+                <a href="" class="nav-list-item" id="Servicios">Pacífica</a>
+              </li>
+              <li>
+                <a href="" class="nav-list-item" id="Acerca-de">Andina</a>
+              </li>
+              <li>
+                <a href="" class="nav-list-item" id="Servicios">Orinoquía</a>
+              </li>
+              <li>
+                <a href="" class="nav-list-item" id="Acerca-de">Amazonía</a>
+              </li>
+            </ul>
+          </div>
+          <form action="post">
+            <div class="search-field">
+              <label for="buscar"
+                ><img src="../static/img/search.svg" alt=""
+              /></label>
+              <input type="text" id="buscar" placeholder="Buscar" />
+            </div>
+          </form>
+        </nav>
+        <div class="padding-block-150">
+          <div class="region-img-representative">
+            <figure>Imagen representativa de la región</figure>
+          </div>
+        </div>
+        <div class="three-col-grid padding-block-150">
+          <div class="tour-card">
+            <div class="tour-image">
+              <div>
+                <figure>Tour image</figure>
+              </div>
+            </div>
+            <div class="tour-tags">
+              <span class="tag bgr-yellow">Fecha</span>
+              <span class="tag bgr-blue" style="display: none">Región</span>
+              <span class="tag bgr-red">Clasificación</span>
+            </div>
+            <div class="tour-info">
+              <p class="fs-body-title">Nombre del Tour</p>
+              <p class="fs-details">Descripción del Tour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="padding-block-250">
+      <div class="container">
+        <div class="contact-form max-width">
+          <div class="title-header">
+            <p>¿Quieres saber más?</p>
+            <h2 class="fs-secondary-heading">Contáctanos</h2>
+          </div>
+          <form>
+            <div class="field">
+              <label for="nombre">Nombre Completo</label>
+              <input type="text" id="nombre" placeholder="Jane Doe" />
+              <span class="error">Error</span>
+            </div>
+            <div class="field">
+              <label for="correo">Correo</label>
+              <input type="email" id="correo" placeholder="example@email.com" />
+              <span class="error">Error</span>
+            </div>
+            <div class="field">
+              <label for="celular">Celular</label>
+              <div class="phone-wrapper">
+                <select>
+                  <option value="" disabled selected hidden>+##</option>
+                  <option>+57</option>
+                  <option>+01</option>
+                  <option>+34</option>
+                  <option>+52</option>
+                </select>
+                <input type="text" id="celular" placeholder="### #######" />
+              </div>
+              <span class="error">Error</span>
+            </div>
+            <div class="field">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" placeholder="Mensaje"></textarea>
+            </div>
+            <div class="field">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="politica" />
+                <label for="politica">Aprobación de alguna política</label>
+              </div>
+              <span class="error">Error</span>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

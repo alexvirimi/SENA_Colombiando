@@ -1,0 +1,119 @@
+.contact-form {
+  background: var(--clr-blanco);
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-200);
+  width: 100%;
+  justify-self: center;
+}
+
+.max-width {
+  max-width: 826px;
+}
+
+.form-header p {
+  font-size: var(--fs-200);
+  color: var(--clr-negro);
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.field label {
+  display: block;
+  font-size: var(--fs-100);
+  margin-bottom: 4px;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="email"],
+.field input[type="password"],
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 10px;
+  font-size: var(--fs-200);
+  outline: none;
+  background: var(--clr-blanco);
+  transition: border-color 0.2s;
+}
+
+.field textarea {
+  border-radius: 10px;
+  resize: vertical;
+  min-height: 90px;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #9ca3af;
+}
+
+.phone-wrapper {
+  display: flex;
+  gap: var(--size-50);
+}
+
+.phone-wrapper select {
+  padding: 0.75rem 0.875rem;
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 10px;
+  font-size: var(--fs-200);
+  background: var(--clr-blanco);
+  outline: none;
+  cursor: pointer;
+}
+
+.phone-wrapper input {
+  flex: 1;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--clr-verde);
+}
+
+.checkbox-wrapper label {
+  font-size: var(--fs-200);
+  margin-bottom: 0;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--clr-verde);
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--clr-blanco);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-submit:hover {
+  background: var(--clr-dorado);
+  border: none;
+}
+
+.error {
+  display: none;
+  font-size: var(--fs-100);
+  color: var(--clr-rojo);
+}
+
+#ingresar a {
+  display: block;
+  margin-top: var(--size-50);
+  text-align: center;
+  color: var(--clr-verde);
+}

@@ -1,0 +1,62 @@
+.tour-features {
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-50);
+}
+
+.tag {
+  font-size: var(--fs-300);
+}
+
+.btn-reserva {
+  flex-grow: 1;
+}
+
+.btn-reserva a {
+  display: block;
+  padding: 12px var(--size-100);
+  background: var(--clr-verde);
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--clr-blanco);
+  text-align: center;
+}
+
+.btn-reserva a:hover {
+  background: var(--clr-dorado);
+}
+
+.tour-description {
+  columns: 2;
+  text-align: justify;
+}
+
+.itinerario {
+  width: 100%;
+  padding-left: var(--size-250);
+}
+
+.it-time {
+  /* background-color: var(--clr-gris-200); */
+  color: var(--clr-gris-600);
+  width: 7rem;
+}
+
+.it-activity-no {
+  /* background-color: var(--clr-gris-200); */
+  color: var(--clr-verde);
+  width: 9rem;
+  font-weight: 700;
+}
+
+.tour-information,
+.payment-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#selected-tour-guide .review-header {
+  flex-direction: row;
+}

@@ -1,0 +1,74 @@
+:root {
+  /* COLORES */
+  --clr-verde: hsl(182, 95%, 15%);
+  --clr-amarillo: hsl(46, 75%, 75%);
+  --clr-azul: hsl(207, 76%, 87%);
+  --clr-rojo: hsl(0, 73%, 77%);
+  --clr-dorado: hsl(37, 48%, 48%);
+
+  --clr-gris-200: hsl(0, 0%, 85%);
+  --clr-gris-400: hsl(0, 0%, 64%);
+  --clr-gris-600: hsl(0, 0%, 43%);
+
+  --clr-negro: hsl(0, 0%, 0%);
+  --clr-blanco: hsl(0, 0%, 100%);
+
+  /* FONT FAMILY */
+  --ff-gloock: "Gloock", serif;
+  --ff-inter: "Inter", sans-serif;
+
+  /* FONT SIZES */
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.25rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+  --fs-900: 6rem;
+
+  /* SIZES */
+  --size-50: 0.5rem;
+  --size-100: 1rem;
+  --size-150: 1.5rem;
+  --size-200: 2rem;
+  --size-250: 2.25rem;
+
+  /* FONT STYLES */
+  --ff-title: var(--ff-gloock);
+  --ff-body: var(--ff-inter);
+
+  --fs-title: var(--fs-900);
+  --fs-primary-heading: var(--fs-700);
+  --fs-secondary-heading: var(--fs-600);
+  --fs-body-title: var(--fs-500);
+  --fs-body: var(--fs-300);
+  --fs-details: var(var(--fs-100));
+}
+
+.secondary-header {
+  height: 693px;
+  padding: 4rem var(--size-250);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background: var(--clr-gris-200);
+}
+
+.secondary-header a {
+  display: inline-block;
+  padding: 12px var(--size-100);
+  background: var(--clr-verde);
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--clr-blanco);
+  margin-top: var(--size-150);
+}
+
+.secondary-header a:hover {
+  background: var(--clr-dorado);
+}
+
+.carrousel {
+  height: 535px;
+}

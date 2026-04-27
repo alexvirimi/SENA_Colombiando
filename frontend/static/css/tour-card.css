@@ -1,0 +1,24 @@
+.tour-card {
+  background: var(--clr-blanco);
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 16px;
+  padding: var(--size-100);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tour-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #d1d5db;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tour-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
