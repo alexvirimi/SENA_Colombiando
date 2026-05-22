@@ -89,6 +89,10 @@
   padding-block: var(--size-250);
 }
 
+.first-padding-block-100 {
+  padding-bottom: var(--size-100);
+}
+
 .first-padding-block-250 {
   padding-bottom: var(--size-250);
 }

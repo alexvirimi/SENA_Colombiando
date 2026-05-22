@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colombiando</title>
+    <link
+      rel="shortcut icon"
+      href="../static/img/Colombiando.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/tour-card.css" />
+    <link rel="stylesheet" href="../static/css/contact-form.css" />
+    <link rel="stylesheet" href="../static/css/carrousel.css" />
+    <link rel="stylesheet" href="../static/css/profile-card.css" />
+    <link rel="stylesheet" href="../static/css/profile-settings.css" />
+  </head>
+  <body>
+    <section class="padding-block-250">
+      <div class="container set-width">
+        <div class="vertical-nav-wrapper">
+          <ul role="list" class="vertical-nav-list">
+            <li>
+              <a href="#" class="vertical-nav-list-item" id="Cuenta">Cuenta</a>
+            </li>
+            <li>
+              <a href="" class="vertical-nav-list-item" id="Contactanos"
+                >Contáctanos</a
+              >
+            </li>
+            <div class="padding-block-100">
+              <hr />
+            </div>
+            <li>
+              <a href="" class="vertical-nav-list-item" id="Eliminar-cuenta"
+                >Eliminar Cuenta</a
+              >
+            </li>
+            <li>
+              <a href="" class="vertical-nav-list-item" id="Log-out">Log Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <div>
+            <form>
+              <div class="field">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Jane Doe" />
+                <span class="error">Error</span>
+              </div>
+              <div class="field">
+                <label for="sex">Sexo</label>
+                <select id="sex">
+                  <option value="" disabled selected hidden>
+                    Seleccione su sexo
+                  </option>
+                  <option>Hombre</option>
+                  <option>Mujer</option>
+                  <option>Prefiero No Decirlo</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="b-day">Fecha de Nacimiento</label>
+                <input type="date" id="b-day" />
+                <span class="error">Error</span>
+              </div>
+              <div class="first-padding-block-100">
+                <hr />
+              </div>
+              <div class="field">
+                <label for="correo">Correo</label>
+                <input
+                  type="email"
+                  id="correo"
+                  placeholder="example@email.com"
+                />
+                <span class="error">Error</span>
+              </div>
+              <div class="field">
+                <label for="celular">Celular</label>
+                <div class="phone-wrapper">
+                  <select>
+                    <option value="" disabled selected hidden>+##</option>
+                    <option>+57</option>
+                    <option>+01</option>
+                    <option>+34</option>
+                    <option>+52</option>
+                  </select>
+                  <input type="text" id="celular" placeholder="### #######" />
+                </div>
+                <span class="error">Error</span>
+              </div>
+              <div class="padding-block-100">
+                <hr />
+              </div>
+              <div class="field">
+                <label for="pwd">Contraseña Actual</label>
+                <input type="password" id="pwd" placeholder="Contraseña" />
+                <span class="error">Error</span>
+              </div>
+              <div class="field">
+                <label for="pwd">Contraseña Nueva</label>
+                <input type="password" id="pwd" placeholder="Contraseña" />
+                <span class="error">Error</span>
+              </div>
+              <button type="submit" class="btn-submit">Guardar Cambios</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

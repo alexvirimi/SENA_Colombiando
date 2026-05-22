@@ -1,0 +1,40 @@
+.set-width {
+  min-height: 708px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.vertical-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-100);
+  padding: var(--size-100);
+  width: 297px;
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 10px;
+}
+
+.vertical-nav-list-item {
+  display: block;
+  padding: var(--size-100) var(--size-50);
+  border-radius: 10px;
+}
+
+#Log-out {
+  margin-top: var(--size-200);
+}
+
+.vertical-nav-list-item:hover,
+.vertical-nav-list-item:focus {
+  background-color: var(--clr-dorado);
+  color: var(--clr-blanco);
+}
+
+.contact-form {
+  max-width: 931px;
+  padding: var(--size-100) var(--size-200);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

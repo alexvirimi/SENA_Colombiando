@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colombiando</title>
+    <link
+      rel="shortcut icon"
+      href="../static/img/Colombiando.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/tour-card.css" />
+    <link rel="stylesheet" href="../static/css/contact-form.css" />
+    <link rel="stylesheet" href="../static/css/carrousel.css" />
+    <link rel="stylesheet" href="../static/css/profile-card.css" />
+    <link rel="stylesheet" href="../static/css/profile-settings.css" />
+  </head>
+  <body>
+    <section class="padding-block-250">
+      <div class="container set-width">
+        <div class="vertical-nav-wrapper">
+          <ul role="list" class="vertical-nav-list">
+            <li>
+              <a href="#" class="vertical-nav-list-item" id="Cuenta">Cuenta</a>
+            </li>
+            <li>
+              <a href="" class="vertical-nav-list-item" id="Contactanos"
+                >Contáctanos</a
+              >
+            </li>
+            <div class="padding-block-100">
+              <hr />
+            </div>
+            <li>
+              <a href="" class="vertical-nav-list-item" id="Eliminar-cuenta"
+                >Eliminar Cuenta</a
+              >
+            </li>
+            <li>
+              <a href="" class="vertical-nav-list-item" id="Log-out">Log Out</a>
+            </li>
+          </ul>
+        </div>
+        <div class="contact-form">
+          <div>
+            <div class="title-header">
+              <h2 class="fs-secondary-heading">Contáctanos</h2>
+            </div>
+            <form>
+              <div class="field">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Jane Doe" />
+                <span class="error">Error</span>
+              </div>
+              <div class="field">
+                <label for="correo">Correo</label>
+                <input
+                  type="email"
+                  id="correo"
+                  placeholder="example@email.com"
+                />
+                <span class="error">Error</span>
+              </div>
+              <div class="field">
+                <label for="celular">Celular</label>
+                <div class="phone-wrapper">
+                  <select>
+                    <option value="" disabled selected hidden>+##</option>
+                    <option>+57</option>
+                    <option>+01</option>
+                    <option>+34</option>
+                    <option>+52</option>
+                  </select>
+                  <input type="text" id="celular" placeholder="### #######" />
+                </div>
+                <span class="error">Error</span>
+              </div>
+              <div class="field">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" placeholder="Mensaje"></textarea>
+              </div>
+              <div class="field">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="politica" />
+                  <label for="politica">Aprobación de alguna política</label>
+                </div>
+                <span class="error">Error</span>
+              </div>
+              <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+          </div>
+          <div class="emergency-numbers">
+            <div class="padding-block-100">
+              <hr />
+            </div>
+            <p class="fs-details">
+              Líneas de Atención Nacionales: +57 000 0000000, +57 000 0000000,
+              +57 000 0000000 | Líneas de Atención Internacionales: 01 8000
+              000000 | servicio@colombiando.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
