@@ -1,0 +1,9 @@
+# ============================================================
+#  db.properties.template — Copia este archivo a db.properties
+#  y rellena con tus credenciales reales (NO subir al repo)
+# ============================================================
+
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/colombiando_db?useSSL=false&serverTimezone=America/Bogota&useUnicode=true&characterEncoding=UTF-8
+db.usuario=TU_USUARIO
+db.contrasena=TU_CONTRASENA

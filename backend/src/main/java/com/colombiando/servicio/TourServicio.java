@@ -12,7 +12,16 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * Capa de servicio para la gestión de {@link Tour}s.
+ *
+ * <p>Reglas de negocio:
+ * <ul>
+ *   <li>No se puede eliminar un tour con reservas confirmadas.</li>
+ *   <li>No se puede cancelar un tour sin notificar estado CANCELADO.</li>
+ *   <li>Un tour debe tener al menos un destino y un empleado asignado.</li>
+ * </ul>
+ */
 public class TourServicio {
 
     private final TourDAO     tourDAO;

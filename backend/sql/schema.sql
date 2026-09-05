@@ -1,3 +1,9 @@
+-- ============================================================
+--  COLOMBIANDO — Modelo Relacional MySQL
+--  Plataforma de Reservas Turísticas
+--  Versión: 1.0
+-- ============================================================
+
 CREATE DATABASE IF NOT EXISTS colombiando_db
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
@@ -5,6 +11,8 @@ CREATE DATABASE IF NOT EXISTS colombiando_db
 USE colombiando_db;
 
 -- ── 1. CLIENTE ────────────────────────────────────────────────
+-- Almacena la información de usuarios tipo cliente.
+-- id_usuario es la PK autoincremental (hereda de la entidad Usuario).
 CREATE TABLE IF NOT EXISTS cliente (
     id_usuario        INT            NOT NULL AUTO_INCREMENT,
     nombre            VARCHAR(80)    NOT NULL,
@@ -144,7 +152,9 @@ CREATE TABLE IF NOT EXISTS pago (
     CONSTRAINT chk_monto         CHECK (monto > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
+-- ══════════════════════════════════════════════════════════════
+--  ÍNDICES (mejora de rendimiento en consultas frecuentes)
+-- ══════════════════════════════════════════════════════════════
 CREATE INDEX idx_cliente_correo   ON cliente(correo);
 CREATE INDEX idx_cliente_doc      ON cliente(numero_documento);
 CREATE INDEX idx_tour_estado      ON tour(estado);

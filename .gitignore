@@ -1,1 +1,31 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# IDEs and editor metadata
+.idea/
+.vscode/
+*.iml
+
+# Maven / Java build output
+**/target/
+*.class
+*.war
+*.jar
+
+# Local database configuration and environment variables
+**/db.properties
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Frontend dependencies and generated output
+**/node_modules/
+**/dist/
+**/build/

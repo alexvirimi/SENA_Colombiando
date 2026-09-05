@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <display-name>Colombiando</display-name>
+
+    <request-character-encoding>UTF-8</request-character-encoding>
+    <response-character-encoding>UTF-8</response-character-encoding>
+
+    <!-- ── FILTROS ─────────────────────────────────────── -->
+    <filter>
+        <filter-name>FiltroEncoding</filter-name>
+        <filter-class>com.colombiando.filtro.FiltroEncoding</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>FiltroEncoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>FiltroLog</filter-name>
+        <filter-class>com.colombiando.filtro.FiltroLog</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FiltroLog</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ── SERVLETS ────────────────────────────────────── -->
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.colombiando.servlet.IndexServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClienteServlet</servlet-name>
+        <servlet-class>com.colombiando.servlet.ClienteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClienteServlet</servlet-name>
+        <url-pattern>/clientes</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EmpleadoServlet</servlet-name>
+        <servlet-class>com.colombiando.servlet.EmpleadoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmpleadoServlet</servlet-name>
+        <url-pattern>/empleados</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TourServlet</servlet-name>
+        <servlet-class>com.colombiando.servlet.TourServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TourServlet</servlet-name>
+        <url-pattern>/tours</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DestinoServlet</servlet-name>
+        <servlet-class>com.colombiando.servlet.DestinoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DestinoServlet</servlet-name>
+        <url-pattern>/destinos</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReservaServlet</servlet-name>
+        <servlet-class>com.colombiando.servlet.ReservaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReservaServlet</servlet-name>
+        <url-pattern>/reservas</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PagoServlet</servlet-name>
+        <servlet-class>com.colombiando.servlet.PagoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PagoServlet</servlet-name>
+        <url-pattern>/pagos</url-pattern>
+    </servlet-mapping>
+
+    <!-- ── ERRORES ─────────────────────────────────────── -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/error/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/views/error/500.jsp</location>
+    </error-page>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

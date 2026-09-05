@@ -1,0 +1,71 @@
+.tour-features {
+  display: flex;
+  flex-direction: row;
+  gap: var(--size-50);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag { font-size: var(--fs-300); }
+
+.btn-reserva { flex-grow: 1; }
+
+.btn-reserva a {
+  display: block;
+  padding: 12px var(--size-100);
+  background: var(--clr-verde);
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--clr-blanco);
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.btn-reserva a:hover { background: var(--clr-dorado); }
+
+.tour-description {
+  columns: 2;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+.itinerario {
+  width: 100%;
+  padding-left: var(--size-250);
+  border-collapse: collapse;
+}
+
+.itinerario tr { border-bottom: 1px solid var(--clr-gris-200); }
+.itinerario td { padding: var(--size-50) var(--size-100); }
+
+.it-time { color: var(--clr-gris-600); width: 7rem; }
+
+.it-activity-no {
+  color: var(--clr-verde);
+  width: 9rem;
+  font-weight: 700;
+}
+
+.tour-information,
+.payment-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#selected-tour-guide .review-header { flex-direction: row; }
+
+/* Estado de reserva */
+.estado-badge {
+  display: inline-block;
+  padding: var(--size-50) var(--size-100);
+  border-radius: 100px;
+  font-size: var(--fs-100);
+  font-weight: 700;
+}
+
+.estado-pendiente  { background: var(--clr-amarillo); color: var(--clr-negro); }
+.estado-confirmada { background: hsl(134, 60%, 85%);  color: hsl(134, 60%, 25%); }
+.estado-cancelada  { background: var(--clr-rojo);      color: var(--clr-negro); }
+.estado-completada { background: var(--clr-azul);      color: var(--clr-verde); }

@@ -1,0 +1,23 @@
+.secondary-header {
+  height: 693px;
+  padding: 4rem var(--size-250);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background: var(--clr-gris-200);
+}
+
+.secondary-header a {
+  display: inline-block;
+  padding: 12px var(--size-100);
+  background: var(--clr-verde);
+  border-radius: 100px;
+  font-weight: 700;
+  color: var(--clr-blanco);
+  margin-top: var(--size-150);
+  transition: background 0.2s;
+}
+
+.secondary-header a:hover { background: var(--clr-dorado); }
+
+.carrousel { height: 535px; }
