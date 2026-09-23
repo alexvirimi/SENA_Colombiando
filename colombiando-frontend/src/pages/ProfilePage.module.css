@@ -1,0 +1,59 @@
+.sub {
+  color: var(--clr-gris-600);
+  font-size: var(--fs-200);
+  margin-top: var(--size-50);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--size-100);
+  color: var(--clr-gris-400);
+}
+
+/* ReservaCard */
+.card {
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s;
+}
+.card:hover { box-shadow: 0 4px 18px rgba(0,0,0,.1); }
+
+.cardHeader { background: var(--clr-gris-200); }
+.cardFig {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ff-gloock);
+  font-size: var(--fs-300);
+  color: var(--clr-gris-600);
+  margin: 0;
+}
+
+.cardBody {
+  padding: var(--size-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-50);
+}
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardTour { font-weight: 700; font-size: var(--fs-300); }
+.cardMeta { font-size: var(--fs-100); color: var(--clr-gris-400); }
+.cardTotal { font-weight: 700; color: var(--clr-verde); font-size: var(--fs-300); }
+
+.cardActions {
+  display: flex;
+  gap: var(--size-50);
+  flex-wrap: wrap;
+  margin-top: var(--size-50);
+}
+.btnSm { padding: 6px 14px !important; font-size: var(--fs-100) !important; }

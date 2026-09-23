@@ -1,0 +1,91 @@
+/* ── Carrusel ── */
+.carrousel {
+  position: relative; width: 100%; height: 535px;
+  overflow: hidden; border-radius: 12px;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+}
+.bg { position: absolute; inset: 0; background: var(--clr-gris-200); background-size: cover; background-position: center; }
+.content {
+  position: relative; width: 100%;
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 4rem var(--size-250); gap: var(--size-100); z-index: 1;
+}
+.infoCard {
+  text-align: center; padding: var(--size-150);
+  background: var(--clr-blanco); border-radius: var(--size-50);
+  min-width: 260px; display: flex; flex-direction: column; gap: var(--size-50); align-items: center;
+}
+.region  { font-size: var(--fs-100); color: var(--clr-gris-400); }
+.nombre  { font-weight: 700; font-size: var(--fs-400); }
+.verBtn {
+  margin-top: var(--size-50); padding: .5rem 1.25rem;
+  background: var(--clr-verde); color: var(--clr-blanco);
+  border: none; border-radius: 100px; font-weight: 700; font-size: var(--fs-200);
+  cursor: pointer; transition: background .2s;
+}
+.verBtn:hover { background: var(--clr-dorado); }
+.btn {
+  background: rgba(0,0,0,.35); border: none; color: var(--clr-blanco);
+  font-size: 2.5rem; line-height: 1; width: 52px; height: 52px;
+  border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background .2s; position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+}
+.btn:hover { background: rgba(0,0,0,.6); }
+.dots { position: absolute; bottom: var(--size-100); display: flex; gap: var(--size-50); z-index: 2; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.45); border: none; cursor: pointer; transition: width .3s, background .3s; }
+.dotOn { width: 24px; border-radius: 4px; background: rgba(255,255,255,.9); }
+
+/* ── Filtros ── */
+.filtersNav {
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: var(--size-100);
+}
+.navWrapper { border: 1px solid var(--clr-negro); border-radius: 50px; padding: var(--size-50); }
+.navList { display: flex; flex-wrap: wrap; gap: var(--size-50); }
+.navItem {
+  padding: var(--size-50) var(--size-150); border-radius: 50px;
+  font-weight: 700; font-size: var(--fs-200);
+  background: none; border: none; cursor: pointer; color: var(--clr-negro); transition: background .15s, color .15s;
+}
+.navItem:hover, .navOn { background: var(--clr-dorado); color: var(--clr-blanco); }
+.search {
+  display: flex; align-items: center; gap: var(--size-100);
+  padding: var(--size-50) var(--size-150);
+  border: 1.5px solid var(--clr-gris-600); border-radius: 100px; color: var(--clr-gris-600);
+}
+.search input { border: none; outline: none; font-size: var(--fs-200); font-family: var(--ff-inter); width: 180px; background: transparent; }
+
+/* ── GuideCard ── */
+.guideCard {
+  display: flex; align-items: center; gap: var(--size-100);
+  background: var(--clr-blanco); border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100); padding: var(--size-150);
+}
+.avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--clr-gris-200); display: flex;
+  align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;
+}
+.guideName  { font-weight: 700; font-size: var(--fs-300); }
+.guideCargo { font-size: var(--fs-100); color: var(--clr-gris-400); }
+
+/* ── ReviewCard ── */
+.reviewCard {
+  background: var(--clr-blanco); border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100); padding: var(--size-150);
+  display: flex; flex-direction: column; gap: var(--size-100);
+}
+.reviewHeader { display: flex; flex-direction: column; align-items: center; gap: var(--size-100); }
+.reviewNombre { font-weight: 700; font-size: var(--fs-300); }
+.reviewTexto  { font-size: var(--fs-200); line-height: 1.6; text-align: center; }
+.reviewFooter { display: flex; justify-content: center; font-size: var(--fs-100); color: var(--clr-gris-400); }
+.reviewFooter span { padding-inline: .6rem; }
+.reviewFooter span:not(:last-child) { border-right: 1px solid var(--clr-gris-400); }
+
+/* ── Itinerario ── */
+.itinerary { width: 100%; border-collapse: collapse; }
+.itRow { border-bottom: 1px solid var(--clr-gris-200); }
+.itRow td { padding: var(--size-50) var(--size-100); font-size: var(--fs-200); vertical-align: top; }
+.itNo   { color: var(--clr-verde); font-weight: 700; width: 7rem; white-space: nowrap; }
+.itAct  { flex: 1; }
+.itTime { color: var(--clr-gris-600); width: 6rem; white-space: nowrap; text-align: right; }

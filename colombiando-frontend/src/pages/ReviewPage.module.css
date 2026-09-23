@@ -1,0 +1,95 @@
+.volver {
+  background: none; border: none;
+  color: var(--clr-verde); font-weight: 700;
+  font-size: var(--fs-200); cursor: pointer;
+  margin-bottom: var(--size-100); transition: color .2s;
+}
+.volver:hover { color: var(--clr-dorado); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--size-200);
+  align-items: start;
+}
+@media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }
+
+.titulo    { margin-bottom: var(--size-50); }
+.subtitulo { color: var(--clr-gris-600); font-size: var(--fs-200); margin-bottom: var(--size-150); }
+
+.form {
+  background: var(--clr-blanco);
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-200);
+}
+
+.bloque { margin-bottom: var(--size-150); }
+
+/* Selector numérico estilo botones */
+.stars { display: flex; flex-wrap: wrap; gap: var(--size-50); margin-bottom: var(--size-100); }
+.star {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  border: 1.5px solid var(--clr-negro);
+  background: none;
+  font-weight: 700;
+  font-size: var(--fs-100);
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.star:hover   { background: var(--clr-amarillo); border-color: var(--clr-amarillo); }
+.starOn       { background: var(--clr-dorado); color: var(--clr-blanco); border-color: var(--clr-dorado); }
+
+.field { display: flex; flex-direction: column; gap: 4px; margin-top: var(--size-100); }
+.label { font-size: var(--fs-100); font-weight: 600; }
+.textarea {
+  width: 100%;
+  padding: .72rem .875rem;
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 10px;
+  font-size: var(--fs-200);
+  font-family: var(--ff-inter);
+  resize: vertical;
+  min-height: 90px;
+  outline: none;
+  transition: border-color .2s;
+}
+.textarea:focus { border-color: var(--clr-gris-400); }
+.err { font-size: var(--fs-100); color: hsl(0,73%,40%); }
+
+.sep { border: none; border-top: 1px solid var(--clr-gris-200); margin-block: var(--size-150); }
+
+/* Panel lateral */
+.infoPanel {
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-150);
+  position: sticky;
+  top: var(--size-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-100);
+}
+.infoPanelTitle { font-weight: 700; font-size: var(--fs-400); }
+.infoItem       { font-size: var(--fs-200); color: var(--clr-gris-600); line-height: 1.6; }
+.infoTip {
+  display: flex;
+  gap: var(--size-50);
+  background: var(--clr-amarillo);
+  border-radius: 10px;
+  padding: var(--size-100);
+  font-size: var(--fs-100);
+  line-height: 1.5;
+}
+.infoTipIcon { font-size: var(--fs-400); flex-shrink: 0; }
+
+/* Éxito */
+.exitoWrap {
+  max-width: 520px; margin: auto;
+  text-align: center;
+  display: flex; flex-direction: column;
+  align-items: center; gap: var(--size-100);
+}
+.exitoIcon { font-size: 4rem; }
+.exitoBtns { display: flex; gap: var(--size-100); flex-wrap: wrap; justify-content: center; }

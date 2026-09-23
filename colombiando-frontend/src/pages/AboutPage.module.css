@@ -1,0 +1,59 @@
+.hero {
+  background: var(--clr-gris-200);
+  padding-block: 3.5rem;
+}
+.intro {
+  max-width: 680px;
+  margin-top: var(--size-100);
+  line-height: 1.8;
+  color: var(--clr-gris-600);
+}
+
+.faqList {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-100);
+}
+
+.faqItem {
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 10px;
+  padding: var(--size-100);
+  transition: background 0.15s;
+}
+.faqItem[open] {
+  background: hsl(182, 95%, 97%);
+}
+
+.faqSummary {
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-300);
+}
+.faqSummary::after {
+  content: "+";
+  font-size: var(--fs-400);
+  color: var(--clr-verde);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.faqItem[open] .faqSummary::after {
+  transform: rotate(45deg);
+}
+
+/* Quitar triángulo nativo */
+.faqSummary::-webkit-details-marker {
+  display: none;
+}
+
+.faqRespuesta {
+  margin-top: var(--size-100);
+  font-size: var(--fs-200);
+  color: var(--clr-gris-600);
+  line-height: 1.7;
+}

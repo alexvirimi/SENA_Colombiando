@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { -moz-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
+* { margin: 0; padding: 0; font: inherit; }
+ul[role="list"], ol[role="list"] { list-style: none; }
+html, body { height: 100%; }
+body { text-rendering: optimizeSpeed; }
+a { text-decoration-skip-ink: auto; color: currentColor; text-decoration: none; }
+img, picture, svg { max-width: 100%; display: block; }
+
+/* ── Variables — tokens exactos del frontend original ── */
+:root {
+  --clr-verde:    hsl(182, 95%, 15%);
+  --clr-amarillo: hsl(46,  75%, 75%);
+  --clr-azul:     hsl(207, 76%, 87%);
+  --clr-rojo:     hsl(0,   73%, 77%);
+  --clr-dorado:   hsl(37,  48%, 48%);
+
+  --clr-gris-200: hsl(0, 0%, 85%);
+  --clr-gris-400: hsl(0, 0%, 64%);
+  --clr-gris-600: hsl(0, 0%, 43%);
+  --clr-gris-900: hsl(0, 0%, 13%);
+  --clr-negro:    hsl(0, 0%,  0%);
+  --clr-blanco:   hsl(0, 0%, 100%);
+
+  --ff-gloock: 'Gloock', serif;
+  --ff-inter:  'Inter',  sans-serif;
+
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 1rem;
+  --fs-400: 1.25rem;
+  --fs-500: 1.5rem;
+  --fs-600: 2rem;
+  --fs-700: 2.5rem;
+  --fs-900: 6rem;
+
+  --size-50:  0.5rem;
+  --size-100: 1rem;
+  --size-150: 1.5rem;
+  --size-200: 2rem;
+  --size-250: 2.25rem;
+}
+
+/* ── Base ── */
+body {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-300);
+  background: var(--clr-blanco);
+  color: var(--clr-negro);
+}
+
+/* ── Clases de tipografía (igual que base.css original) ── */
+.fs-title            { font-size: var(--fs-900); font-family: var(--ff-gloock); }
+.fs-primary-heading  { font-size: var(--fs-700); font-family: var(--ff-gloock); }
+.fs-secondary-heading{ font-size: var(--fs-600); font-weight: 700; }
+.fs-body-title       { font-size: var(--fs-500); font-weight: 700; }
+.fs-details          { font-size: var(--fs-100); color: var(--clr-gris-400); }
+
+/* ── Contenedor centrado (igual que .container original) ── */
+.container {
+  width: min(1240px, 100% - 3rem);
+  margin-inline: auto;
+}
+
+/* ── Colores de fondo ── */
+.bgr-green  { background-color: var(--clr-verde); }
+.bgr-yellow { background-color: var(--clr-amarillo); }
+.bgr-blue   { background-color: var(--clr-azul); }
+.bgr-red    { background-color: var(--clr-rojo); }
+.bgr-gold   { background-color: var(--clr-dorado); }
+
+/* ── Espaciado ── */
+.padding-block-50  { padding-block: var(--size-50); }
+.padding-block-100 { padding-block: var(--size-100); }
+.padding-block-150 { padding-block: var(--size-150); }
+.padding-block-200 { padding-block: var(--size-200); }
+.padding-block-250 { padding-block: var(--size-250); }
+
+/* ── Grid de 3 columnas (igual que .three-col-grid original) ── */
+.three-col-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--size-100);
+}
+@media (max-width: 900px) { .three-col-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .three-col-grid { grid-template-columns: 1fr; }
+  .fs-title { font-size: var(--fs-700); }
+}
+
+/* ── Tags (igual que .tag original) ── */
+.tour-tags { display: flex; flex-wrap: wrap; gap: var(--size-50); }
+.tag {
+  font-size: var(--fs-200);
+  color: var(--clr-gris-900);
+  border-radius: 10px;
+  padding: var(--size-50) var(--size-150);
+  font-weight: 700;
+  display: inline-block;
+}
+.outline { border: 1.5px solid var(--clr-negro); }
+
+/* ── Alertas globales ── */
+.alert {
+  padding: var(--size-100) var(--size-150);
+  border-radius: 10px;
+  font-size: var(--fs-200);
+  font-weight: 600;
+  margin-bottom: var(--size-100);
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+}
+.alert-success { background: hsl(134,60%,90%); color: hsl(134,60%,25%); }
+.alert-error   { background: hsl(0,73%,93%);   color: hsl(0,73%,35%);  }
+.alert-info    { background: var(--clr-azul);   color: var(--clr-verde); }

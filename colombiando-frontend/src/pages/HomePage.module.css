@@ -1,0 +1,44 @@
+.heroSection { padding-top: 0; }
+
+.heroPlaceholder {
+  min-height: 420px;
+  background: var(--clr-gris-200);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 4rem var(--size-250);
+}
+.heroTagline {
+  font-size: var(--fs-700);
+  font-family: var(--ff-gloock);
+  color: var(--clr-negro);
+  margin-bottom: var(--size-50);
+}
+
+.verTodos {
+  text-align: center;
+  margin-top: var(--size-150);
+}
+.verTodosBtn {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: var(--fs-200);
+  color: var(--clr-negro);
+  transition: background .2s, color .2s;
+}
+.verTodosBtn:hover {
+  background: var(--clr-dorado);
+  color: var(--clr-blanco);
+  border-color: var(--clr-dorado);
+}
+
+.reviewsSection { background: var(--clr-gris-200); }
+.reviewsHeader  {
+  text-align: center;
+  margin-bottom: var(--size-150);
+}

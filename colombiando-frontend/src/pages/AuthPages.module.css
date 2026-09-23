@@ -1,0 +1,95 @@
+.wrap {
+  max-width: 480px;
+  margin: auto;
+  padding-inline: var(--size-100);
+}
+.wrapWide { max-width: 640px; }
+
+.card {
+  background: var(--clr-blanco);
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-200);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-100);
+}
+
+.logoHeader { text-align: center; margin-bottom: var(--size-50); }
+.logo {
+  font-family: var(--ff-gloock);
+  font-size: var(--fs-600);
+  color: var(--clr-negro);
+  transition: color .2s;
+}
+.logo:hover { color: var(--clr-dorado); }
+
+/* Contraseña con link de recuperación */
+.pwdField { position: relative; }
+
+.switchLink {
+  text-align: center;
+  font-size: var(--fs-200);
+  color: var(--clr-gris-600);
+}
+.link {
+  color: var(--clr-verde);
+  font-weight: 700;
+  transition: color .2s;
+}
+.link:hover { color: var(--clr-dorado); }
+.linkSmall {
+  display: block;
+  font-size: var(--fs-100);
+  color: var(--clr-verde);
+  margin-top: 4px;
+  transition: color .2s;
+}
+.linkSmall:hover { color: var(--clr-dorado); }
+
+/* Grids */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--size-100);
+}
+@media (max-width: 500px) { .grid2 { grid-template-columns: 1fr; } }
+
+/* Teléfono */
+.phoneRow { margin-bottom: 0; }
+.phoneWrap { display: flex; gap: var(--size-50); }
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 1.25rem;
+}
+.label { font-size: var(--fs-100); font-weight: 600; }
+.select,
+.input {
+  width: 100%;
+  padding: 0.72rem 0.875rem;
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 10px;
+  font-size: var(--fs-200);
+  font-family: var(--ff-inter);
+  background: var(--clr-blanco);
+  outline: none;
+  transition: border-color .2s;
+}
+.select:focus, .input:focus { border-color: var(--clr-gris-400); }
+.inputErr { border-color: var(--clr-rojo); }
+.err { font-size: var(--fs-100); color: hsl(0,73%,40%); }
+
+/* Checkbox política */
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+  margin-bottom: var(--size-150);
+}
+.checkRow input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: var(--clr-verde);
+  flex-shrink: 0;
+}

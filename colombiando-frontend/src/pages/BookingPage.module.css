@@ -1,0 +1,24 @@
+.volver {
+  background: none;
+  border: none;
+  color: var(--clr-verde);
+  font-weight: 700;
+  font-size: var(--fs-200);
+  cursor: pointer;
+  margin-bottom: var(--size-100);
+  transition: color .2s;
+}
+.volver:hover { color: var(--clr-dorado); }
+
+.titulo { margin-bottom: var(--size-150); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--size-200);
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+}

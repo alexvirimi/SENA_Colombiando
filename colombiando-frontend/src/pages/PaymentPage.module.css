@@ -1,0 +1,76 @@
+.volver {
+  background: none; border: none;
+  color: var(--clr-verde); font-weight: 700;
+  font-size: var(--fs-200); cursor: pointer;
+  margin-bottom: var(--size-100); transition: color .2s;
+}
+.volver:hover { color: var(--clr-dorado); }
+.titulo { margin-bottom: var(--size-150); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--size-200);
+  align-items: start;
+}
+@media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }
+
+/* Panel lateral */
+.infoPanel {
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-150);
+  position: sticky;
+  top: var(--size-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-100);
+}
+.panelTitle  { font-weight: 700; font-size: var(--fs-400); }
+.reservaInfo { display: flex; flex-direction: column; gap: 0; }
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .35rem 0;
+  border-bottom: 1px solid var(--clr-gris-200);
+  font-size: var(--fs-200);
+}
+.infoKey { color: var(--clr-gris-600); }
+
+.pagosTitle { font-weight: 700; font-size: var(--fs-200); margin-top: var(--size-50); }
+.pagoItem {
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+  padding: .25rem 0;
+  font-size: var(--fs-100);
+  border-bottom: 1px solid var(--clr-gris-200);
+}
+.pagoMetodo { flex: 1; }
+.pagoMonto  { font-weight: 700; color: var(--clr-verde); }
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-200);
+  font-weight: 600;
+  border-top: 1.5px solid var(--clr-negro);
+  padding-top: var(--size-50);
+  margin-top: var(--size-50);
+}
+
+/* Éxito */
+.exitoWrap {
+  max-width: 520px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-100);
+}
+.exitoIcon { font-size: 4rem; }
+.exitoBtns {
+  display: flex; gap: var(--size-100);
+  flex-wrap: wrap; justify-content: center;
+}

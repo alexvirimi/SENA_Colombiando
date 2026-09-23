@@ -1,0 +1,209 @@
+/* ── Shared form shell ───────────────────────────────────── */
+.form {
+  background: var(--clr-blanco);
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-200);
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--size-100);
+}
+@media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+
+/* ── Field atoms ─────────────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 1.25rem;
+}
+.label {
+  font-size: var(--fs-100);
+  font-weight: 600;
+}
+.req { color: var(--clr-rojo); }
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.72rem 0.875rem;
+  border: 1.5px solid var(--clr-negro);
+  border-radius: 10px;
+  font-size: var(--fs-200);
+  font-family: var(--ff-inter);
+  background: var(--clr-blanco);
+  outline: none;
+  transition: border-color .2s;
+}
+.input:focus,
+.select:focus,
+.textarea:focus   { border-color: var(--clr-gris-400); }
+.inputErr         { border-color: var(--clr-rojo); }
+.textarea         { resize: vertical; min-height: 80px; }
+.err              { font-size: var(--fs-100); color: hsl(0,73%,40%); }
+
+.checkRow {
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+  margin-bottom: var(--size-150);
+}
+.checkRow input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--clr-verde);
+  flex-shrink: 0;
+}
+
+/* ── Tour preview (BookingForm) ──────────────────────────── */
+.tourPreview {
+  display: flex;
+  align-items: center;
+  gap: var(--size-100);
+  padding: var(--size-100);
+  background: var(--clr-gris-200);
+  border-radius: 10px;
+  margin-bottom: var(--size-150);
+}
+.tourPreviewColor {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--clr-verde);
+  flex-shrink: 0;
+}
+.tourPreviewNombre { font-weight: 700; font-size: var(--fs-300); }
+.tourPreviewSub    { font-size: var(--fs-100); color: var(--clr-gris-400); }
+.tourPreviewPrecio {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: var(--fs-400);
+  color: var(--clr-verde);
+  white-space: nowrap;
+}
+.tourPreviewPrecio span {
+  font-size: var(--fs-100);
+  color: var(--clr-gris-400);
+  font-weight: 400;
+}
+
+/* Costo preview dinámico */
+.costoPreview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-100) var(--size-150);
+  background: var(--clr-azul);
+  border-radius: 10px;
+  margin-bottom: var(--size-150);
+  font-size: var(--fs-200);
+}
+
+/* ── BookingSummary ──────────────────────────────────────── */
+.summary {
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-150);
+  position: sticky;
+  top: var(--size-100);
+}
+.summaryTitle {
+  font-weight: 700;
+  font-size: var(--fs-400);
+  margin-bottom: var(--size-100);
+}
+.summaryTourBanner {
+  background: var(--clr-gris-200);
+  border-radius: 10px;
+  padding: var(--size-100);
+  text-align: center;
+  margin-bottom: var(--size-100);
+}
+.summaryTourNombre { font-weight: 700; font-family: var(--ff-gloock); }
+.summaryTourSub    { font-size: var(--fs-100); color: var(--clr-gris-400); }
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  font-size: var(--fs-200);
+  border-bottom: 1px solid var(--clr-gris-200);
+}
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--size-100);
+  font-weight: 700;
+  font-size: var(--fs-400);
+  border-top: 1.5px solid var(--clr-negro);
+  margin-top: var(--size-50);
+}
+.summaryNote {
+  font-size: var(--fs-100);
+  color: var(--clr-gris-400);
+  text-align: center;
+  margin-top: var(--size-100);
+  line-height: 1.5;
+}
+
+/* ── ConfirmationBanner ──────────────────────────────────── */
+.confirm {
+  max-width: 600px;
+  margin: var(--size-200) auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--size-100);
+}
+.confirmIcon  { font-size: 4rem; }
+.confirmTitle {
+  font-family: var(--ff-gloock);
+  font-size: var(--fs-700);
+  color: var(--clr-verde);
+  line-height: 1.1;
+}
+.confirmSub { color: var(--clr-gris-600); font-size: var(--fs-200); }
+.confirmCard {
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-150);
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.confirmRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--clr-gris-200);
+  font-size: var(--fs-200);
+}
+.confirmKey { color: var(--clr-gris-600); }
+.confirmEstado { padding-top: var(--size-100); }
+.confirmActions {
+  display: flex;
+  gap: var(--size-100);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--size-50);
+}
+
+/* ── ContactForm ─────────────────────────────────────────── */
+.contactWrap {
+  background: var(--clr-blanco);
+  border: 1.5px solid var(--clr-negro);
+  border-radius: var(--size-100);
+  padding: var(--size-200);
+  max-width: 826px;
+  margin: auto;
+}
+.contactHeader {
+  text-align: center;
+  margin-bottom: var(--size-150);
+}
